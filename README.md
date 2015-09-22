@@ -1,5 +1,5 @@
 # x-plane-map
-Google Map plugin for X-Plane.
+Google Map plugin for X-Plane. You can find a [compiled version](http://forums.x-plane.org/index.php?app=downloads&showfile=25569) on the x-plane forums.
 
 SETUP INSTRUCTIONS
 ------------------
@@ -9,11 +9,9 @@ SETUP INSTRUCTIONS
   * Make sure no other checkboxes for Internet data output are active.
   * In Settings -> Net Connections, go to the Data tab and fill out the IP and port : 127.0.0.1 (that's your computer) and 49003. Check the "IP of Data Receiver" checkbox.
  
-2. Running the Map Server
-	The map server is the included Java application (x-plane-map.jar file). Under Windows, just double-click WindowsLauncher.bat to launch it.
-	Under Mac or Linux, you need to open a terminal and type in the command line 
-		java -jar /path/to/the/file/x-plane-map.jar
-	You can save that command in a shell or ".command" file for quicker access if you wish.
+2. Building and Running the Map Server
+
+I have not yet gotten around to use a build file, just build this with res/ in the classpath. You also need to include [com.sun.net.httpserver](http://docs.oracle.com/javase/8/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/package-summary.html) and [json-simple](https://github.com/fangyidong/json-simple) in the build path.
 	
 VIEWING AND USING THE MAP
 -------------------------
@@ -41,8 +39,8 @@ External Moving Map is multiplayer-ready, it can show multiple planes from compu
 FAQ
 ---
  Q: X-Plane won't start anymore, I get a "udp_socket_read udp_init failed" error message.
- A: Open file Output/Preferences/X-Plane.prf, in your X-Plane directory, look for the lines starting with _rcv_port, _snd_port and _flr_port 
-	and check that the port values are 49000, 49001 and 49002 respectively. After that, X-Plane should be able to restart.
+
+ A: Open file Output/Preferences/X-Plane.prf, in your X-Plane directory, look for the lines starting with `_rcv_port`, `_snd_port` and `_flr_port` and check that the port values are 49000, 49001 and 49002 respectively. After that, X-Plane should be able to restart.
 
 	
 I ALSO HAVE A QUESTION FOR YOU:
@@ -52,4 +50,4 @@ Here are my next ideas:
 * Look up for a navaid: type its name, the map pans to it.
 * Enter and view flight plans.
 * As requested, choose the plane's color.
-Anything else ? Feel free to leave a comment on the forum!
+Anything else ? Feel free to leave an improvement issue!
