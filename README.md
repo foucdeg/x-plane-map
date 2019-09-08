@@ -1,3 +1,7 @@
+# Repository archived
+
+If you are looking for Airspaces, it is located at [foucdeg/airspaces](https://github.com/foucdeg/airspaces). This is the code for a very old version of the desktop app.
+
 # x-plane-map
 Google Map plugin for X-Plane. You can find a [compiled version](http://forums.x-plane.org/index.php?app=downloads&showfile=25569) on the x-plane forums.
 
